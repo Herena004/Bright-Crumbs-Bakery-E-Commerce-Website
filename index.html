@@ -1,0 +1,460 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bright Crumbs Bakery - Freshly Baked Happiness</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Playfair+Display:wght@400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar" id="navbar">
+        <div class="nav-container">
+            <a href="#" class="logo">
+                <i class="fas fa-bread-slice"></i>
+                <span>Bright Crumbs</span>
+            </a>
+            
+            <ul class="nav-links" id="navLinks">
+                <li><a href="#home">Home</a></li>
+                <li><a href="#products">Products</a></li>
+                <li><a href="#categories">Categories</a></li>
+                <li><a href="#offers">Offers</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#gallery">Gallery</a></li>
+                <li><a href="#testimonials">Reviews</a></li>
+            </ul>
+
+            <div class="nav-actions">
+                <button class="icon-btn" id="darkModeToggle">
+                    <i class="fas fa-moon"></i>
+                </button>
+                <button class="icon-btn cart-btn" id="cartBtn">
+                    <i class="fas fa-shopping-cart"></i>
+                    <span class="cart-count" id="cartCount">0</span>
+                </button>
+                <button class="hamburger" id="hamburger">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </button>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero" id="home">
+        <div class="hero-bg"></div>
+        <div class="floating-items">
+            <div class="floating-item cupcake">🧁</div>
+            <div class="floating-item cookie">🍪</div>
+            <div class="floating-item donut">🍩</div>
+            <div class="floating-item cake">🍰</div>
+            <div class="floating-item croissant">🥐</div>
+        </div>
+        <div class="hero-content">
+            <h1 class="hero-title">
+                <span class="animate-text">Freshly Baked</span>
+                <span class="animate-text delay-1">Happiness</span>
+                <span class="animate-text delay-2">Everyday</span>
+            </h1>
+            <p class="hero-subtitle">Handcrafted with love, baked to perfection</p>
+            <a href="#products" class="btn btn-primary btn-glow">
+                Order Now <i class="fas fa-arrow-right"></i>
+            </a>
+        </div>
+        <div class="scroll-indicator">
+            <div class="mouse"></div>
+        </div>
+    </section>
+
+    <!-- Categories Section -->
+    <section class="categories" id="categories">
+        <div class="container">
+            <h2 class="section-title">Our Categories</h2>
+            <div class="categories-grid">
+                <div class="category-card" data-category="cakes">
+                    <div class="category-img">
+                        <img src="https://images.unsplash.com/photo-1578985545062-69928b1d9587?w=400" alt="Cakes">
+                    </div>
+                    <h3>Cakes</h3>
+                </div>
+                <div class="category-card" data-category="cupcakes">
+                    <div class="category-img">
+                        <img src="https://images.unsplash.com/photo-1576618148400-f54bed99fcfd?w=400" alt="Cupcakes">
+                    </div>
+                    <h3>Cupcakes</h3>
+                </div>
+                <div class="category-card" data-category="donuts">
+                    <div class="category-img">
+                        <img src="https://images.unsplash.com/photo-1551024601-bec78aea704b?w=400" alt="Donuts">
+                    </div>
+                    <h3>Donuts</h3>
+                </div>
+                <div class="category-card" data-category="pastries">
+                    <div class="category-img">
+                        <img src="https://images.unsplash.com/photo-1555507036-ab1f4038808a?w=400" alt="Pastries">
+                    </div>
+                    <h3>Pastries</h3>
+                </div>
+                <div class="category-card" data-category="cookies">
+                    <div class="category-img">
+                        <img src="https://images.unsplash.com/photo-1499636136210-6f4ee915583e?w=400" alt="Cookies">
+                    </div>
+                    <h3>Cookies</h3>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Featured Products -->
+    <section class="products" id="products">
+        <div class="container">
+            <h2 class="section-title">Featured Products</h2>
+            <div class="products-grid" id="productsGrid">
+                <!-- Products injected by JS -->
+            </div>
+        </div>
+    </section>
+
+    <!-- Special Offers -->
+    <section class="offers" id="offers">
+        <div class="container">
+            <h2 class="section-title">Special Offers</h2>
+            <div class="offers-grid">
+                <div class="offer-card featured">
+                    <div class="offer-badge">Hot Deal</div>
+                    <h3>Buy 1 Get 1 Free</h3>
+                    <p>On all cupcakes this weekend!</p>
+                    <div class="countdown" id="countdown1">
+                        <div class="time-box">
+                            <span class="days">00</span>
+                            <small>Days</small>
+                        </div>
+                        <div class="time-box">
+                            <span class="hours">00</span>
+                            <small>Hours</small>
+                        </div>
+                        <div class="time-box">
+                            <span class="minutes">00</span>
+                            <small>Mins</small>
+                        </div>
+                        <div class="time-box">
+                            <span class="seconds">00</span>
+                            <small>Secs</small>
+                        </div>
+                    </div>
+                </div>
+                <div class="offer-card">
+                    <div class="offer-badge">Festival</div>
+                    <h3>Summer Festival 25% Off</h3>
+                    <p>All fruit cakes and pastries</p>
+                    <div class="countdown" id="countdown2">
+                        <div class="time-box">
+                            <span class="days">00</span>
+                            <small>Days</small>
+                        </div>
+                        <div class="time-box">
+                            <span class="hours">00</span>
+                            <small>Hours</small>
+                        </div>
+                        <div class="time-box">
+                            <span class="minutes">00</span>
+                            <small>Mins</small>
+                        </div>
+                        <div class="time-box">
+                            <span class="seconds">00</span>
+                            <small>Secs</small>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section class="about" id="about">
+        <div class="container">
+            <div class="about-grid">
+                <div class="about-image">
+                    <img src="https://images.unsplash.com/photo-1556910103-1c02745aae4d?w=600" alt="Our Chef">
+                    <div class="experience-badge">
+                        <span class="years">15+</span>
+                        <span class="text">Years Experience</span>
+                    </div>
+                </div>
+                <div class="about-content">
+                    <h2 class="section-title">Our Story</h2>
+                    <p>Founded in 2009, Bright Crumbs Bakery began with a simple mission: to bring joy through freshly baked goods. Our master baker, Chef Antonio, brings over 15 years of culinary expertise to every creation.</p>
+                    <p>We use only the finest ingredients - organic flour, farm-fresh eggs, and premium Belgian chocolate. Every item is baked fresh daily in our kitchen.</p>
+                    <div class="features">
+                        <div class="feature">
+                            <i class="fas fa-leaf"></i>
+                            <span>Fresh Ingredients</span>
+                        </div>
+                        <div class="feature">
+                            <i class="fas fa-heart"></i>
+                            <span>Made with Love</span>
+                        </div>
+                        <div class="feature">
+                            <i class="fas fa-clock"></i>
+                            <span>Baked Daily</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Gallery Section -->
+    <section class="gallery" id="gallery">
+        <div class="container">
+            <h2 class="section-title">Our Gallery</h2>
+            <div class="gallery-grid">
+                <div class="gallery-item" data-index="0">
+                    <img src="https://images.unsplash.com/photo-1565958011703-44f9829ba187?w=600" alt="Cake">
+                    <div class="overlay">
+                        <i class="fas fa-expand"></i>
+                    </div>
+                </div>
+                <div class="gallery-item" data-index="1">
+                    <img src="https://images.unsplash.com/photo-1587314168485-3236d6710814?w=600" alt="Cupcakes">
+                    <div class="overlay">
+                        <i class="fas fa-expand"></i>
+                    </div>
+                </div>
+                <div class="gallery-item" data-index="2">
+                    <img src="https://images.unsplash.com/photo-1558326567-98ae2405596b?w=600" alt="Pastry">
+                    <div class="overlay">
+                        <i class="fas fa-expand"></i>
+                    </div>
+                </div>
+                <div class="gallery-item" data-index="3">
+                    <img src="https://images.unsplash.com/photo-1550617931-e17a7b70dce2?w=600" alt="Donuts">
+                    <div class="overlay">
+                        <i class="fas fa-expand"></i>
+                    </div>
+                </div>
+                <div class="gallery-item" data-index="4">
+                    <img src="bread.png" alt="Bread">
+                    <div class="overlay">
+                        <i class="fas fa-expand"></i>
+                    </div>
+                </div>
+                <div class="gallery-item" data-index="5">
+                    <img src="https://images.unsplash.com/photo-1606890737304-57a1ca8a5b62?w=600" alt="Cookies">
+                    <div class="overlay">
+                        <i class="fas fa-expand"></i>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Lightbox -->
+    <div class="lightbox" id="lightbox">
+        <button class="lightbox-close" id="lightboxClose"><i class="fas fa-times"></i></button>
+        <button class="lightbox-nav prev" id="lightboxPrev"><i class="fas fa-chevron-left"></i></button>
+        <img src="" alt="" id="lightboxImg">
+        <button class="lightbox-nav next" id="lightboxNext"><i class="fas fa-chevron-right"></i></button>
+    </div>
+
+    <!-- Testimonials -->
+    <section class="testimonials" id="testimonials">
+        <div class="container">
+            <h2 class="section-title">What Our Customers Say</h2>
+            <div class="testimonials-slider" id="testimonialsSlider">
+                <div class="testimonial-track" id="testimonialTrack">
+                    <div class="testimonial-card">
+                        <div class="stars">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                        </div>
+                        <p>"Best chocolate cake ever! The richness and moisture are unmatched. My family couldn't get enough!"</p>
+                        <div class="customer">
+                            <img src="https://images.unsplash.com/photo-1494790108377-be9c29b29330?w=100" alt="Sarah">
+                            <div>
+                                <h4>Sarah Johnson</h4>
+                                <span>Regular Customer</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="testimonial-card">
+                        <div class="stars">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                        </div>
+                        <p>"The cupcakes are absolutely divine! Perfect for my daughter's birthday party. Everyone loved them!"</p>
+                        <div class="customer">
+                            <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=100" alt="Mike">
+                            <div>
+                                <h4>Mike Chen</h4>
+                                <span>Event Planner</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="testimonial-card">
+                        <div class="stars">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star-half-alt"></i>
+                        </div>
+                        <p>"Amazing quality and service. The sourdough bread is the best in town. Highly recommended!"</p>
+                        <div class="customer">
+                            <img src="https://images.unsplash.com/photo-1438761681033-6461ffad8d80?w=100" alt="Emma">
+                            <div>
+                                <h4>Emma Wilson</h4>
+                                <span>Food Blogger</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="testimonial-card">
+                        <div class="stars">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                        </div>
+                        <p>"Their macarons are heavenly! Perfect texture and flavors. I order them every week without fail."</p>
+                        <div class="customer">
+                            <img src="https://images.unsplash.com/photo-1500648767791-00dcc994a43e?w=100" alt="David">
+                            <div>
+                                <h4>David Park</h4>
+                                <span>Chef</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="slider-dots" id="sliderDots"></div>
+        </div>
+    </section>
+
+    <!-- Cart Sidebar -->
+    <div class="cart-overlay" id="cartOverlay"></div>
+    <aside class="cart-sidebar" id="cartSidebar">
+        <div class="cart-header">
+            <h3><i class="fas fa-shopping-cart"></i> Your Cart</h3>
+            <button class="close-cart" id="closeCart"><i class="fas fa-times"></i></button>
+        </div>
+        <div class="cart-items" id="cartItems">
+            <!-- Cart items injected by JS -->
+        </div>
+        <div class="cart-footer">
+            <div class="cart-total">
+                <span>Total:</span>
+                <span id="cartTotal">$0.00</span>
+            </div>
+            <button class="btn btn-primary btn-checkout" id="checkoutBtn">Proceed to Checkout</button>
+        </div>
+    </aside>
+
+    <!-- Checkout Modal -->
+    <div class="modal" id="checkoutModal">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h2>Checkout</h2>
+                <button class="close-modal" id="closeModal"><i class="fas fa-times"></i></button>
+            </div>
+            <div class="checkout-grid">
+                <div class="checkout-form">
+                    <h3>Delivery Address</h3>
+                    <form id="checkoutForm">
+                        <div class="form-group">
+                            <input type="text" placeholder="Full Name" required>
+                        </div>
+                        <div class="form-group">
+                            <input type="email" placeholder="Email Address" required>
+                        </div>
+                        <div class="form-group">
+                            <input type="tel" placeholder="Phone Number" required>
+                        </div>
+                        <div class="form-group">
+                            <textarea placeholder="Delivery Address" rows="3" required></textarea>
+                        </div>
+                        <div class="form-row">
+                            <div class="form-group">
+                                <input type="text" placeholder="City" required>
+                            </div>
+                            <div class="form-group">
+                                <input type="text" placeholder="ZIP Code" required>
+                            </div>
+                        </div>
+                        
+                        <h3>Payment Method</h3>
+                        <div class="payment-options">
+                            <label class="payment-option">
+                                <input type="radio" name="payment" value="card" checked>
+                                <span><i class="fas fa-credit-card"></i> Credit Card</span>
+                            </label>
+                            <label class="payment-option">
+                                <input type="radio" name="payment" value="paypal">
+                                <span><i class="fab fa-paypal"></i> PayPal</span>
+                            </label>
+                            <label class="payment-option">
+                                <input type="radio" name="payment" value="cash">
+                                <span><i class="fas fa-money-bill-wave"></i> Cash on Delivery</span>
+                            </label>
+                        </div>
+                        
+                        <div class="promo-code">
+                            <input type="text" placeholder="Promo Code" id="promoInput">
+                            <button type="button" class="btn btn-secondary" id="applyPromo">Apply</button>
+                        </div>
+                    </form>
+                </div>
+                <div class="order-summary">
+                    <h3>Order Summary</h3>
+                    <div class="summary-items" id="summaryItems">
+                        <!-- Summary items injected by JS -->
+                    </div>
+                    <div class="summary-totals">
+                        <div class="line">
+                            <span>Subtotal</span>
+                            <span id="summarySubtotal">$0.00</span>
+                        </div>
+                        <div class="line">
+                            <span>Discount</span>
+                            <span id="summaryDiscount">-$0.00</span>
+                        </div>
+                        <div class="line">
+                            <span>Delivery</span>
+                            <span>$5.00</span>
+                        </div>
+                        <div class="line total">
+                            <span>Total</span>
+                            <span id="summaryTotal">$0.00</span>
+                        </div>
+                    </div>
+                    <button type="submit" class="btn btn-primary btn-place-order" id="placeOrderBtn">Place Order</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Toast Notification -->
+    <div class="toast" id="toast">
+        <i class="fas fa-check-circle"></i>
+        <span id="toastMessage">Item added to cart!</span>
+    </div>
+
+    <!-- Sticky Cart Button (Mobile) -->
+    <button class="sticky-cart-btn" id="stickyCartBtn">
+        <i class="fas fa-shopping-cart"></i>
+        <span class="cart-count" id="stickyCartCount">0</span>
+    </button>
+
+    <script src="script.js"></script>
+</body>
+</html>
